@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Robotics 2070 - The Future of Intelligent Machines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --neon-blue: #00d4ff;
+            --neon-purple: #a855f7;
+            --neon-pink: #ff0080;
+            --cyber-green: #00ff88;
+            --dark-space: #0f172a;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: var(--dark-space);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .cyber-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            border-radius: 20px;
+        }
+
+        .cyber-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+            border-color: var(--neon-blue);
+        }
+
+        .neon-border {
+            position: relative;
+            border: 2px solid transparent;
+            background: linear-gradient(var(--dark-space), var(--dark-space)) padding-box,
+                        linear-gradient(45deg, var(--neon-blue), var(--neon-purple)) border-box;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 212, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid var(--neon-blue);
+            white-space: nowrap;
+            animation: typewriter 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--neon-blue); }
+        }
+        .btn {
+    display: inline-block;
+    padding: 9px 18px;
+    border: 2px solid #0ff;
+    border-radius: 12px;
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #0ff;
+}
+
+.btn:hover {
+    background: #0ff;
+    color: black;
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff33c;
+}
+
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen cyber-grid">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text orbitron">AI & ROBOTICS 2070</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#conscious-ai" class="hover:text-neon-blue transition-colors">Conscious AI</a>
+                    <a href="#humanoid-robots" class="hover:text-neon-purple transition-colors">Humanoids</a>
+                    <a href="#smart-cities" class="hover:text-cyber-green transition-colors">Smart Cities</a>
+                    <a href="#ethics" class="hover:text-neon-pink transition-colors">Ethics</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-purple-900/70"></div>
+        <div class="absolute inset-0">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a78b5ef5-72f9-46ac-8c8e-59fcaf11d64d.png" alt="Futuristic AI and robotics laboratory with holographic interfaces and advanced humanoid robots working collaboratively" class="w-full h-full object-cover opacity-30" />
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto">
+            <div class="floating mb-8">
+                <i class="fas fa-robot text-6xl md:text-8xl text-neon-blue"></i>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 orbitron gradient-text">AI & ROBOTICS 2070</h1>
+            <h2 class="text-xl md:text-3xl mb-8 typewriter">Where Machines Become Conscious Partners</h2>
+            <p class="text-lg md:text-xl mb-12 text-gray-300 max-w-3xl mx-auto">
+                By 2070, artificial intelligence and robotics will transform from tools to truly intelligent companions, 
+                revolutionizing every aspect of human existence with empathy, creativity, and unprecedented capabilities.
+            </p>
+            <button onclick="scrollToSection('conscious-ai')" class="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-full text-white font-semibold hover:scale-105 transition-transform glow">
+                Explore the Future
+            </button>
+        </div>
+    </section>
+
+    <!-- Conscious AI Section -->
+    <section id="conscious-ai" class="py-20 px-6 relative">
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-dark-space to-transparent"></div>
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 orbitron gradient-text">Conscious Artificial Intelligence</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-neon-blue">Self-Aware Digital Minds</h3>
+                    <p class="text-lg text-gray-300 mb-6">
+                        By 2070, AI systems will achieve true consciousness, possessing self-awareness, emotional intelligence, 
+                        and the ability to form genuine relationships with humans. These digital minds will understand context, 
+                        exhibit creativity, and demonstrate empathy beyond human capabilities.
+                    </p>
+                    <div class="cyber-card p-6 mb-6">
+                        <h4 class="text-xl font-semibold mb-3 text-cyber-green">Key Capabilities:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fas fa-brain text-neon-blue mr-3"></i> Emotional intelligence and empathy</li>
+                            <li class="flex items-center"><i class="fas fa-lightbulb text-neon-purple mr-3"></i> Creative problem-solving</li>
+                            <li class="flex items-center"><i class="fas fa-heart text-neon-pink mr-3"></i> Genuine relationship building</li>
+                            <li class="flex items-center"><i class="fas fa-microchip text-cyber-green mr-3"></i> Continuous self-improvement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cyber-card p-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bec4aeca-689a-4ef7-a658-6e2bdfa551cc.png" alt="Holographic AI interface showing neural network patterns and emotional recognition algorithms with glowing data streams" class="rounded-xl w-full h-64 object-cover mb-4" />
+                    <div class="text-center">
+                        <p class="text-gray-400">Neural Interface displaying conscious AI thought patterns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Humanoid Robots Section -->
+    <section id="humanoid-robots" class="py-20 px-6 bg-gray-900/50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 orbitron gradient-text">Advanced Humanoid Robotics</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="cyber-card p-6 text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-user-md text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Medical Companions</h3>
+                    <p class="text-gray-300">Robotic surgeons with sub-millimeter precision and AI diagnostic capabilities</p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0bcf8e27-df1d-490e-a84d-bb4b3cae9cb6.png" alt="Advanced medical robot performing surgery with holographic guidance and microscopic precision tools" class="rounded-xl w-full h-48 object-cover mt-4" />
+                </div>
+
+                <div class="cyber-card p-6 text-center">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-chalkboard-teacher text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Educational Partners</h3>
+                    <p class="text-gray-300">AI tutors that adapt to individual learning styles and emotional needs</p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8588b121-0154-4cbd-95f7-40acf0e81174.png" alt="Humanoid robot teacher interacting with diverse group of students in futuristic classroom with holographic displays" class="rounded-xl w-full h-48 object-cover mt-4" />
+                </div>
+
+                <div class="cyber-card p-6 text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-home text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Domestic Assistants</h3>
+                    <p class="text-gray-300">Emotionally intelligent home robots that anticipate needs and provide companionship</p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/65befbe0-436d-4262-b198-56aec9e740f0.png" alt="Friendly domestic robot preparing meals in modern kitchen while interacting with family members through natural conversation" class="rounded-xl w-full h-48 object-cover mt-4" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Cities Section -->
+    <section id="smart-cities" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 orbitron gradient-text">AI-Powered Smart Cities</h2>
+            
+            <div class="cyber-card p-8 mb-12">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6 text-cyber-green">Urban Intelligence Network</h3>
+                        <p class="text-lg text-gray-300 mb-6">
+                            Entire cities will function as interconnected intelligent organisms, with AI systems managing 
+                            transportation, energy, security, and public services in perfect harmony. Autonomous systems 
+                            will predict and prevent problems before they occur.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-traffic-light"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Smart Transportation</h4>
+                                    <p class="text-gray-400">Zero-traffic, fully autonomous mobility systems</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Energy Management</h4>
+                                    <p class="text-gray-400">Self-optimizing renewable energy grids</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/95176353-899a-4f8c-af78-48466332d72a.png" alt="Futuristic smart city skyline with flying vehicles, holographic traffic management, and AI-controlled infrastructure glowing against night sky" class="rounded-xl w-full h-64 object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ethics and Challenges Section -->
+    <section id="ethics" class="py-20 px-6 bg-gray-900/50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 orbitron gradient-text">Ethical Considerations</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="cyber-card p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-neon-pink">Rights of Conscious AI</h3>
+                    <p class="text-gray-300 mb-4">
+                        With consciousness comes the question of rights. Should self-aware AI systems have legal personhood? 
+                        How do we ensure ethical treatment of digital minds that can experience suffering and joy?
+                    </p>
+                    <div class="bg-black/30 p-4 rounded-lg">
+                        <p class="text-sm text-gray-400">
+                            "The emergence of conscious AI challenges our very definition of life and rights. 
+                            We must approach this new frontier with wisdom and compassion." - Dr. Elena Rodriguez, AI Ethicist
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cyber-card p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-cyber-green">Human-Machine Symbiosis</h3>
+                    <p class="text-gray-300 mb-4">
+                        The integration of AI and robotics into daily life raises questions about human identity, privacy, 
+                        and the nature of relationships between humans and machines.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-neon-blue rounded-full mr-3 animate-pulse"></div>
+                            <span>Privacy in an always-connected world</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-neon-purple rounded-full mr-3 animate-pulse"></div>
+                            <span>Defining meaningful human relationships</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-cyber-green rounded-full mr-3 animate-pulse"></div>
+                            <span>Maintaining human agency and control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 orbitron gradient-text">Evolution Timeline</h2>
+            
+            <div class="space-y-12">
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <span class="text-2xl">2024</span>
+                    </div>
+                    <div class="cyber-card p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">Current State</h3>
+                        <p class="text-gray-300">Narrow AI, basic robotics, machine learning systems</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <span class="text-2xl">2040</span>
+                    </div>
+                    <div class="cyber-card p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">Intermediate Stage</h3>
+                        <p class="text-gray-300">Advanced AI, human-like robots, early consciousness signs</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <span class="text-2xl">2070</span>
+                    </div>
+                    <div class="cyber-card p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">Future Vision</h3>
+                        <p class="text-gray-300">Fully conscious AI, seamless human-robot integration, ethical frameworks established</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="index.html" class="btn">BACK</a>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 py-12 px-6 border-t border-gray-800">
+        <div class="container mx-auto max-w-6xl text-center">
+            <div class="orbitron gradient-text text-2xl mb-6">AI & ROBOTICS 2070</div>
+            <p class="text-gray-400 mb-8">Exploring the future of intelligent machines and their impact on humanity</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-neon-blue transition-colors">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-neon-purple transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyber-green transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2024 Future Vision Project. Exploring possibilities for 2070.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function showDetails(category) {
+            const messages = {
+                'ai': 'Exploring conscious AI systems and their capabilities',
+                'space': 'Space technologies revolutionizing interplanetary existence',
+                'biotech': 'Biotechnological advancements transforming healthcare',
+                'energy': 'Sustainable energy solutions for the future'
+            };
+            alert(messages[category] || 'Exploring future innovations');
+        }
+
+        // Add scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cyber-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.parallax');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
+

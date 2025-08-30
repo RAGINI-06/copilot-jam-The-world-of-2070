@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Innovations 2070 - The Future Unveiled</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --neon-blue: #00d4ff;
+      --neon-purple: #a855f7;
+      --dark-space: #0f172a;
+    }
+
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background: var(--dark-space);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .orbitron { font-family: 'Orbitron', sans-serif; }
+
+    .gradient-text {
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+.btn {
+    display: inline-block;
+    padding: 9px 18px;
+    border: 2px solid #0ff;
+    border-radius: 12px;
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #0ff;
+}
+
+.btn:hover {
+    background: #0ff;
+    color: black;
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff33c;
+}
+
+    .glow {
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
+    }
+
+    .innovation-card {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+
+    .innovation-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,212,255,0.06);
+    }
+
+    .timeline-item { position: relative; padding-left: 3rem; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: var(--neon-blue);
+      opacity: .35;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -6px;
+      top: 0;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--neon-blue);
+      animation: pulse 2s infinite;
+      box-shadow: 0 0 12px rgba(0,212,255,0.25);
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,212,255,0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(0,212,255,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,212,255,0); }
+    }
+
+    .typewriter {
+      overflow: hidden;
+      border-right: 3px solid var(--neon-blue);
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+      display: inline-block;
+    }
+    @keyframes typing { from { width: 0 } to { width: 100% } }
+    @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--neon-blue) } }
+
+    /* Modal base */
+    .modal-bg { background: rgba(3,7,18,0.7); }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <div class="text-2xl font-bold gradient-text orbitron">2070 INNOVATIONS</div>
+          <button id="mobileMenuBtn" class="md:hidden text-gray-300 focus:outline-none" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#ai" class="hover:text-neon-blue transition-colors">AI & Robotics</a>
+          <a href="#space" class="hover:text-neon-blue transition-colors">Space Tech</a>
+          <a href="#biotech" class="hover:text-neon-blue transition-colors">BioTech</a>
+          <a href="#energy" class="hover:text-neon-blue transition-colors">Energy</a>
+          <button onclick="scrollToSection('timeline')" class="ml-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white orbitron glow">Timeline</button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden mt-3 md:hidden">
+        <div class="flex flex-col space-y-2">
+          <a href="#ai" class="block py-2">AI & Robotics</a>
+          <a href="#space" class="block py-2">Space Tech</a>
+          <a href="#biotech" class="block py-2">BioTech</a>
+          <a href="#energy" class="block py-2">Energy</a>
+          <a href="#timeline" class="block py-2">Timeline</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9c4e56cc-a46d-4c55-b67d-fabc22a86caa.png"
+           alt="Futuristic cityscape with flying vehicles and holographic displays in 2070"
+           class="w-full h-full object-cover opacity-30" />
+    </div>
+
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <h1 class="text-6xl md:text-8xl font-bold mb-6 orbitron gradient-text">2070</h1>
+      <h2 class="text-2xl md:text-4xl mb-8"><span class="typewriter">Where Innovation Meets Reality</span></h2>
+      <p class="text-xl mb-8 text-gray-300">Discover the groundbreaking technologies that will reshape humanity by 2070</p>
+      <div class="flex justify-center gap-4">
+        <button onclick="scrollToSection('innovations')" class="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-full text-white font-semibold hover:scale-105 transition-transform glow">
+          Explore Future Innovations
+        </button>
+        <a href="#timeline" class="px-6 py-4 rounded-full border border-gray-600 hover:bg-white/5 transition">See Timeline</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovations Overview -->
+  <section id="innovations" class="py-20 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 orbitron gradient-text">Revolutionary Technologies of 2070</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <!-- AI & Robotics -->
+        <article class="innovation-card rounded-2xl p-6" id="ai" aria-labelledby="ai-title">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+            <span class="text-2xl">🤖</span>
+          </div>
+          <h3 id="ai-title" class="text-2xl font-bold mb-3">AI & Robotics</h3>
+          <p class="text-gray-300 mb-4">Conscious AI systems and humanoid robots integrated into daily life—assistants, companions, and skilled collaborators.</p>
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e78b649-d7f0-4daa-81d6-efcb7fba9767.png"
+               alt="Advanced humanoid robot working alongside humans in a futuristic office"
+               class="rounded-xl w-full h-48 object-cover mb-4" />
+          <button onclick="showDetails('ai')" class="text-blue-400 hover:text-blue-300">Learn More →</button>
+        </article>
+
+        <!-- Space Technology -->
+        <article class="innovation-card rounded-2xl p-6" id="space" aria-labelledby="space-title">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+            <span class="text-2xl">🚀</span>
+          </div>
+          <h3 id="space-title" class="text-2xl font-bold mb-3">Space Technology</h3>
+          <p class="text-gray-300 mb-4">Interplanetary travel, orbital habitats and space-based manufacturing reshape human expansion beyond Earth.</p>
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/696fb318-6923-4cd9-9c6a-47c06d032c9b.png"
+               alt="Space elevator connecting Earth to orbital station"
+               class="rounded-xl w-full h-48 object-cover mb-4" />
+          <button onclick="showDetails('space')" class="text-purple-400 hover:text-purple-300">Learn More →</button>
+        </article>
+
+        <!-- Biotechnology -->
+        <article class="innovation-card rounded-2xl p-6" id="biotech" aria-labelledby="biotech-title">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
+            <span class="text-2xl">🧬</span>
+          </div>
+          <h3 id="biotech-title" class="text-2xl font-bold mb-3">Biotechnology</h3>
+          <p class="text-gray-300 mb-4">Genetic engineering, regenerative medicine, and biointerfaces dramatically reduce disease and extend healthy human lifespan.</p>
+          <!-- Completed img tag with alt and placeholder source -->
+          <img src="https://placehold.co/600x400?text=Biotech+2070" alt="Lab with genetic engineering interfaces and organ regeneration technology" class="rounded-xl w-full h-48 object-cover mb-4" />
+          <button onclick="showDetails('biotech')" class="text-green-400 hover:text-green-300">Learn More →</button>
+        </article>
+
+        <!-- Energy -->
+        <article class="innovation-card rounded-2xl p-6" id="energy" aria-labelledby="energy-title">
+          <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+            <span class="text-2xl">⚡</span>
+          </div>
+          <h3 id="energy-title" class="text-2xl font-bold mb-3">Energy</h3>
+          <p class="text-gray-300 mb-4">Ubiquitous fusion, ultra-efficient solar arrays, and city-scale energy storage create abundant, clean power.</p>
+          <img src="https://placehold.co/600x400?text=Clean+Energy+2070" alt="Fusion plants and floating solar arrays powering a city" class="rounded-xl w-full h-48 object-cover mb-4" />
+          <button onclick="showDetails('energy')" class="text-yellow-300 hover:text-yellow-200">Learn More →</button>
+        </article>
+
+        <!-- Add more cards as needed -->
+      </div>
+
+      <!-- Quick features / callouts -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="innovation-card rounded-xl p-6">
+          <h4 class="font-semibold mb-2">Human-Centered Design</h4>
+          <p class="text-gray-300 text-sm">Every tech is designed to enhance human well-being and dignity.</p>
+        </div>
+        <div class="innovation-card rounded-xl p-6">
+          <h4 class="font-semibold mb-2">Planetary Stewardship</h4>
+          <p class="text-gray-300 text-sm">Technologies emphasizing repair, restoration and sustainable growth.</p>
+        </div>
+        <div class="innovation-card rounded-xl p-6">
+          <h4 class="font-semibold mb-2">Shared Prosperity</h4>
+          <p class="text-gray-300 text-sm">Models that focus on equitable access and community governance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" class="py-16 px-6">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-bold text-center mb-8 orbitron gradient-text">Path to 2070 — Key Milestones</h2>
+
+      <div class="space-y-8">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="font-semibold">2025–2035</h3>
+          <p class="text-gray-300">Foundations: AI safety frameworks, commercial fusion prototypes, CRISPR therapy expansion, first orbital manufacturing stations.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="font-semibold">2035–2055</h3>
+          <p class="text-gray-300">Scaling: Autonomous infrastructure, affordable orbital launch, organ-regeneration clinics, city-scale renewable conversions.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="font-semibold">2055–2070</h3>
+          <p class="text-gray-300">Mainstream: Interplanetary logistics, integrated human-AI collaboration, cured genetic diseases, abundant clean energy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<a href="index.html" class="btn">BACK</a>
+  <!-- Footer -->
+  <footer class="py-8 border-t border-gray-800 mt-12">
+    <div class="container mx-auto px-6 max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-sm text-gray-400">&copy; <span id="year"></span> 2070 Innovations • Built for imagination</div>
+      <div class="flex gap-4">
+        <a href="#" class="text-gray-300 hover:underline">About</a>
+        <a href="#" class="text-gray-300 hover:underline">Contact</a>
+        <a href="#" class="text-gray-300 hover:underline">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal (hidden by default) -->
+  <div id="detailsModal" class="hidden fixed inset-0 z-60 flex items-center justify-center modal-bg">
+    <div class="bg-black/90 border border-gray-800 rounded-2xl max-w-3xl w-full mx-4 p-6 relative">
+      <button id="modalClose" class="absolute right-4 top-4 text-gray-300 focus:outline-none" aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <div id="modalContent">
+        <h3 id="modalTitle" class="text-2xl font-bold mb-3 orbitron gradient-text"></h3>
+        <p id="modalText" class="text-gray-300 mb-4"></p>
+        <img id="modalImg" src="" alt="" class="rounded-lg w-full h-60 object-cover mb-4" />
+        <div class="flex justify-end gap-3">
+          <button onclick="closeModal()" class="px-4 py-2 rounded-md border border-gray-700 hover:bg-white/5">Close</button>
+          <a id="modalLearnMore" href="#" class="px-4 py-2 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 text-white">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // DOM helpers
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const yearSpan = document.getElementById('year');
+    const modal = document.getElementById('detailsModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const modalImg = document.getElementById('modalImg');
+    const modalLearnMore = document.getElementById('modalLearnMore');
+    const modalClose = document.getElementById('modalClose');
+
+    yearSpan.textContent = new Date().getFullYear();
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Content map for modal
+    const details = {
+      ai: {
+        title: 'AI & Robotics — Symbiotic Intelligence',
+        text: 'By 2070, AI systems operate as trusted collaborators — augmenting creativity, automating dangerous tasks, and personalizing healthcare. Robotics blend physical dexterity with social intelligence.',
+        img: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e78b649-d7f0-4daa-81d6-efcb7fba9767.png',
+        link: '#ai'
+      },
+      space: {
+        title: 'Space Technology — Becoming Interplanetary',
+        text: 'Advanced propulsion, orbital habitats, and in-space manufacturing enable sustainable expansion. Space becomes a working domain for materials, energy and research.',
+        img: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/696fb318-6923-4cd9-9c6a-47c06d032c9b.png',
+        link: '#space'
+      },
+      biotech: {
+        title: 'Biotechnology — Healing & Enhancing Life',
+        text: 'Precision gene therapies, organ regeneration and smart biointerfaces dramatically lower disease burdens and restore function. Ethical governance centers human dignity.',
+        img: 'https://placehold.co/1200x800?text=Biotech+2070',
+        link: '#biotech'
+      },
+      energy: {
+        title: 'Energy — Abundant and Clean',
+        text: 'Fusion prototypes reach commercial scale, paired with planetary solar and long-duration storage. Energy scarcity becomes a design problem, not a crisis.',
+        img: 'https://placehold.co/1200x800?text=Clean+Energy+2070',
+        link: '#energy'
+      }
+    };
+
+    function showDetails(key) {
+      const info = details[key];
+      if (!info) return;
+      modalTitle.textContent = info.title;
+      modalText.textContent = info.text;
+      modalImg.src = info.img;
+      modalImg.alt = info.title;
+      modalLearnMore.href = info.link || '#';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // prevent background scroll
+      // focus for accessibility
+      modalClose.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside inner card
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // close on ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

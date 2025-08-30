@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #020617, #07132a);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #63f0ff;
+  text-shadow: 0 0 10px #63f0ff, 0 0 20px #8b5cff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #63f0ff, 0 0 20px #8b5cff; }
+  to { text-shadow: 0 0 20px #8b5cff, 0 0 40px #63f0ff; }
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #8b5cff;
+  margin-top: 10px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.intro img {
+  width: 50%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(99, 240, 255, 0.5);
+}
+
+.intro p {
+  font-size: 1.2rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(99, 240, 255, 0.6);
+}
+
+.back {
+  text-align: center;
+  margin: 30px;
+}
+
+.back a {
+  text-decoration: none;
+  color: #63f0ff;
+  font-weight: bold;
+  border: 2px solid #63f0ff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.back a:hover {
+  background: #63f0ff;
+  color: #020617;
+}

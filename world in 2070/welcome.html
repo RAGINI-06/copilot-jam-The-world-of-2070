@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to 2070</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: radial-gradient(circle at top left, #00111a, #000000);
+      overflow: hidden;
+      font-family: 'Courier New', monospace;
+      color: #00ffcc;
+      text-align: center;
+      
+      background-image: url("world.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Glowing dots background */
+    .dots {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .dots span {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #00ffcc;
+      border-radius: 50%;
+      animation: move 10s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes move {
+      0% { transform: translateY(0); opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    /* Typing headline */
+    h1 {
+      font-size: 2.5rem;
+      border-right: 2px solid #00ffcc;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.7s step-end infinite alternate;
+      z-index: 1;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      from { border-color: transparent; }
+      to { border-color: #00ffcc; }
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+      animation-delay: 4s;
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Futuristic glowing button */
+    .glow-btn {
+      margin-top: 25px;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00ffcc;
+      background: transparent;
+      border: 2px solid #00ffcc;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s;
+
+      /* Start hidden */
+      opacity: 0;
+      animation: showBtn 1s ease-in forwards;
+      animation-delay: 6s; /* delay before button appears */
+    }
+
+    @keyframes showBtn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .glow-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(0,255,204,0.6), transparent);
+      transition: 0.5s;
+    }
+
+    .glow-btn:hover::before {
+      left: 100%;
+    }
+
+    .glow-btn:hover {
+      background: #00ffcc22;
+      box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc;
+    }
+  </style>
+</head>
+<body>
+  <!-- AI glowing dots background -->
+  <div class="dots">
+    <span style="left: 10%; animation-duration: 8s;"></span>
+    <span style="left: 30%; animation-duration: 12s;"></span>
+    <span style="left: 50%; animation-duration: 10s;"></span>
+    <span style="left: 70%; animation-duration: 9s;"></span>
+    <span style="left: 90%; animation-duration: 11s;"></span>
+    <span style="left: 20%; animation-duration: 14s;"></span>
+    <span style="left: 60%; animation-duration: 13s;"></span>
+    <span style="left: 80%; animation-duration: 15s;"></span>
+  </div>
+
+  <!-- Typing headline -->
+  <h1>Welcome! You are entering in 2070 🚀</h1>
+  <p>Are you ready!</p>
+
+  <!-- Futuristic Button with delay -->
+  <button class="glow-btn" onclick="window.location.href='index.html'">
+    Yes we are excited
+  </button>
+
+</body>
+</html>
+
